@@ -1,0 +1,164 @@
+% a mashup of hipstercv, friggeri and twenty cv
+% https://www.latextemplates.com/template/twenty-seconds-resumecv
+% https://www.latextemplates.com/template/friggeri-resume-cv
+
+\documentclass[lighthipster]{simplehipstercv}
+% available options are: darkhipster, lighthipster, pastel, allblack, grey, verylight, withoutsidebar
+% withoutsidebar
+\usepackage[utf8]{inputenc}
+\usepackage[default]{raleway}
+\usepackage[margin=1cm, a4paper]{geometry}
+\usepackage{hyperref}
+
+
+%------------------------------------------------------------------ Variablen
+
+\newlength{\rightcolwidth}
+\newlength{\leftcolwidth}
+\setlength{\leftcolwidth}{0.23\textwidth}
+\setlength{\rightcolwidth}{0.75\textwidth}
+
+\newcommand{\Chash}{\ooalign{\hidewidth\tikz\node[inner sep=0pt,opacity=0]{C\#};\cr C$^\sharp$ \cr}}
+
+%------------------------------------------------------------------
+\title{New Simple CV}
+\author{\LaTeX{} Ninja}
+\date{June 2019}
+
+\pagestyle{empty}
+\begin{document}
+
+
+\thispagestyle{empty}
+%-------------------------------------------------------------
+
+\section*{Start}
+
+\simpleheader{headercolour}{Arttu}{Juntunen}{ }{white}
+
+
+
+%------------------------------------------------
+
+% this has to be here so the paracols starts..
+\subsection*{}
+\vspace{4em}
+
+\setlength{\columnsep}{1cm}
+\columnratio{0.22}[0.78]
+\begin{paracol}{2}
+\hbadness5000
+%\backgroundcolor{c[1]}[rgb]{1,1,0.8} % cream yellow for column-1 %\backgroundcolor{g}[rgb]{0.8,1,1} % \backgroundcolor{l}[rgb]{0,0,0.7} % dark blue for left margin
+
+\paracolbackgroundoptions
+
+% 0.9,0.9,0.9 -- 0.8,0.8,0.8
+
+
+\footnotesize
+{\setasidefontcolour
+\flushright
+
+\vspace*{5em}
+
+
+\bg{cvgreen}{white}{Henkilötiedot} \\[0.5em]
+Arttu Juntunen
+
+nationality: Finnish
+
+14.09.1996
+
+\bigskip
+
+\bg{cvgreen}{white}{Tietoja minusta}\\[0.5em]
+
+{\footnotesize
+Olen muusikkotaustainen tietojenkäsittelytieteen opiskelija. Minulla on usean vuoden muusikon työn ja muusikko-opintojen ansiosta kehittynyt vahva ryhmätyö- ja yhteistyöosaaminen. Olen tunnollinen työskentelijä, jota haasteet ja ongelmat motivoivat oppimaan uutta niiden ratkaisemiseksi}
+\bigskip
+
+\bg{cvgreen}{white}{Osaaminen} \\[0.5em]
+
+Säveltäminen \\
+Äänitys/Miksaus \\
+Ohjelmointi \\
+Pelinkehitys \\
+Äänisuunnittelu \\
+
+\bigskip
+
+\vspace{\fill}
+
+\infobubble{\faLinkedin}{cvgreen}{white}{\href{https://www.linkedin.com/in/arttu-juntunen-8b7085195/}{Arttu Juntunen}}
+\infobubble{\faInstagram}{cvgreen}{white}{\href{https://www.instagram.com/djuntune/}{Djuntune}}
+\infobubble{\faGithub}{cvgreen}{white}{\href{https://github.com/Seakorv}{Seakorv}}
+
+\phantom{turn the page}
+
+\phantom{turn the page}
+}
+%-----------------------------------------------------------
+\switchcolumn
+
+\normalsize
+\section*{Työkokemus}
+
+\begin{tabular}{r| p{0.5\textwidth} c}
+    \cvevent{2017-->}{Bilebändi Rubiinin Kuutio}{\textbf{Basisti}}{Olen toiminut Bilebändi Rubiinin Kuutiossa basistina kesästä 2017 lähtien. Yhtyeellä on aktiivisesti keikkailtu ja tämän lisäksi olen hoitanut yhtyeen keikkamyyntiä.}{rklogo.jpg} \\
+    \cvevent{2019 ->}{Basisti}{\textbf{Pasi Vainionperä}}{Olen toiminut artisti Pasi Vainionperän livebändissä basistina kesästä 2019 lähtien.}{pvLogo.png}
+\end{tabular}
+\vspace{3em}
+
+\begin{minipage}[t]{0.35\textwidth}
+\section*{Koulutus}
+\begin{tabular}{r p{0.8\textwidth} c}
+    \cvdegree{2015}{Ylioppilas}{}{Cygnaeus Lukio \color{headerblue}}{}\\
+    \cvdegree{2017}{Muusikko}{}{Jyväskylän Ammattiopisto \color{headerblue}}{} \\
+    \cvdegree{2022}{Muusikko (AMK)}{}{Metropolia Ammattikorkeakoulu \color{headerblue}}{} \\
+    \cvdegree{2022 ->}{Tietojenkäsittelytieteen maisteriohjelma}{}{Jyväskylän Yliopisto}{}
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.3\textwidth}
+\section*{Ohjelmointi}
+\begin{tabular}{r @{\hspace{0.5em}}l}
+     \bg{skilllabelcolour}{iconcolour}{\Chash} & \barrule{0.5}{0.5em}{cvgreen}\\
+     \bg{skilllabelcolour}{iconcolour}{Java} & \barrule{0.46}{0.5em}{cvgreen}\\
+     \bg{skilllabelcolour}{iconcolour}{javascript} & \barrule{0.35}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{GDScript} & \barrule{0.34}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{React} &  \barrule{0.25}{0.5em}{cvpurple}\\
+     \bg{skilllabelcolour}{iconcolour}{python} & \barrule{0.22}{0.5em}{cvpurple} \\
+     \bg{skilllabelcolour}{iconcolour}{Rust} & \barrule{0.15}{0.5em}{cvpurple} \\
+     \bg{skilllabelcolour}{iconcolour}{html, css} &  \barrule{0.15}{0.5em}{cvpurple}\\
+     \bg{skilllabelcolour}{iconcolour}{Scheme} &  \barrule{0.1}{0.5em}{cvpurple}\\
+     \bg{skilllabelcolour}{iconcolour}{\LaTeX} & \barrule{0.15}{0.5em}{cvpurple} \\
+\end{tabular}
+\end{minipage}
+
+\section*{Luottamustehtävät}
+\begin{tabular}{r| p{0.5\textwidth} c}
+    \cvevent{2023, 2025}{Rahastonhoitaja}{\textbf{Linkki Jyväskylä ry}}{Toimin Linkki Jyväskylä ry:n rahastonhoitajana vuosina 2023 ja 2025. Tehtäviin kuului järjestön kirjanpidosta ja raahaliikenteestä huolehtiminen sekä tilinpäätöksen tekeminen.}{linkki.png} \\
+    \cvevent{2024, 2025}{Jyväsmetrotiimi}{\textbf{Linkki Jyväskylä ry}}{Olin järjestämässä Jyväskylän vapun ajan yhtä suurimmista opiskelijatapahtumista vuosina 2024 ja 2025. Jyväsmetrossa yli tuhat opiskelijaa vierailee 25 linja-autolla viiden tunnin ajan Jyväskylän ja sen lähiseudun baareissa. Tehtäviini tiimissä kuului muun muassa aikataulujen tekeminen, linja-autojen hankinta, baareihin kontaktointi, laskujen maksaminen ja lähettäminen sekä oheistuotteiden hankinta.}{jmKuva.png} \\
+\end{tabular}
+\vspace{3em}
+
+
+
+
+
+
+\vfill{} % Whitespace before final footer
+
+%----------------------------------------------------------------------------------------
+%	FINAL FOOTER
+%----------------------------------------------------------------------------------------
+\setlength{\parindent}{0pt}
+\begin{minipage}[t]{\rightcolwidth}
+\begin{center}\fontfamily{\sfdefault}\selectfont \color{black!70}
+{\small Arttu Juntunen \icon{\faMapMarker}{cvgreen}{} Jyväskylä \icon{\faPhone}{cvgreen}{} +358 50 4322 480 \icon{\faAt}{cvgreen}{} \protect\url{arttu.96@hotmail.com}
+}
+\end{center}
+\end{minipage}
+
+\end{paracol}
+
+\end{document}
